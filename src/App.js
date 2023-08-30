@@ -5,8 +5,8 @@ import CartPage from "./pages/CartPage";
 
 function App() {
   return (
-    <div className="App">
-      <div className="bg-black py-2 ">
+    <div className="App relative">
+      <div className="bg-black py-2 fixed w-[100%] top-0">
       <Navbar/>
       </div>
 

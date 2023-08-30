@@ -8,7 +8,7 @@ const CartSummary = () => {
     setTotalAmount(cart.reduce((acc, curr) => acc + curr.price, 0));
   }, [cart]);
   return (
-    <div className="flex flex-col gap-4 w-full justify-center">
+    <div className="flex flex-col gap-4 mt-[70px] w-full justify-center">
       <div className="text-center text-4xl font-bold">
         <p className="tracking-widest">Your Cart Summary</p>
       </div>

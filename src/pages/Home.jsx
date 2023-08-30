@@ -1,23 +1,19 @@
-// import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Products from "../components/Products";
 import Loader from "../components/Loader";
 
 const Home = () => {
-    
-    const API_URL = "https://fakestoreapi.com/products";
+  const API_URL = "https://fakestoreapi.com/products";
   const [productData, setProductData] = useState([]);
   const [loading, setLoading] = useState(false);
 
   async function fetchProductsData() {
     try {
       setLoading(true);
-    //   const response = await axios.get(API_URL);
-    //   const data = response.data;
 
-    const response = await fetch(API_URL)
-    const data = await response.json()
-      console.log(data);
+      const response = await fetch(API_URL);
+      const data = await response.json();
+      // console.log(data);
       setProductData(data);
     } catch (error) {
       console.log("Something went wrong", error);
@@ -31,11 +27,9 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="w-full min-h-[80vh] flex items-center justify-center">
+    <div className="w-full min-h-[80vh] flex items-center justify-center mt-[100px]">
       {loading ? (
-        <div className="">
-          <Loader/>
-        </div>
+        <Loader />
       ) : productData.length > 0 ? (
         <div className="w-[90%] border flex flex-wrap justify-between mx-auto gap-4 mt-4">
           {productData.map((product) => (
@@ -44,7 +38,7 @@ const Home = () => {
         </div>
       ) : (
         <div>
-          <p>No Data Found</p>
+          <p className="text-4xl tracking-widest font-bold">No Data Found</p>
         </div>
       )}
     </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "../redux/slices/CartSlice";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 
 const Products = ({ product }) => {
   const { cart } = useSelector((state) => state);
@@ -9,12 +9,12 @@ const Products = ({ product }) => {
 
   const removeProduct = ()=>{
     dispatch(removeFromCart(product.id))
-    toast.error("Item Removed")
+    toast.error("Item removed from cart")
   }
    
   const addProduct = () =>{
     dispatch(addToCart(product))
-    toast.success("Item Added")
+    toast.success("Item added to cart")
   }
 
   return (
@@ -42,7 +42,7 @@ const Products = ({ product }) => {
             Remove From Cart
           </button>
         ) : (
-          <button onClick={addProduct} className="font-bold px-4 py-2 bg-green-500 rounded-lg text-white">
+          <button onClick={addProduct} className="font-bold px-4 py-2 bg-green-600 rounded-lg text-white">
             Add To Cart
           </button>
         )}
