@@ -13,7 +13,6 @@ const Home = () => {
 
       const response = await fetch(API_URL);
       const data = await response.json();
-      // console.log(data);
       setProductData(data);
     } catch (error) {
       console.log("Something went wrong", error);
@@ -31,7 +30,7 @@ const Home = () => {
       {loading ? (
         <Loader />
       ) : productData.length > 0 ? (
-        <div className="w-[90%] border flex flex-wrap justify-between mx-auto gap-4 mt-4">
+        <div className="w-[90%] border sm:flex flex-wrap justify-between mx-auto gap-4 mt-4">
           {productData.map((product) => (
             <Products key={product.id} product={product} />
           ))}

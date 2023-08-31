@@ -14,7 +14,7 @@ const Cart = ({ product }) => {
     }
     
   return (
-    <div className=" flex w-full border my-4 justify-between">
+    <div className="flex flex-col sm:flex sm:flex-row w-full border items-center my-4 justify-between">
       <div className="w-[30%] h-[300px] ">
         <img className="w-full h-full" src={product.image} alt="" />
       </div>
@@ -23,9 +23,9 @@ const Cart = ({ product }) => {
           <p className="text-2xl font-bold">{product.title}</p>
           <p>{product.description}</p>
         </div>
-        <div className="flex items-center justify-around w-full ">
+        <div className="flex flex-col sm:flex sm:flex-row items-center justify-around w-full ">
           <p className="font-bold text-2xl ">Price: <span className="text-green-600">${product.price}</span></p>
-          <div className='cursor-pointer h-[40px] w-[40px] bg-red-500 rounded-full text-white flex items-center justify-center text-4xl p-2 hover:scale-125 transition-all duration-200' onClick={removeItem}>
+          <div className='cursor-pointer h-[40px] w-[40px] bg-red-500 rounded-full  text-white flex items-center justify-center text-4xl p-2 hover:scale-125 transition-all duration-200' onClick={removeItem}>
             <AiTwotoneDelete />
           </div>
         </div>

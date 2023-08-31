@@ -7,12 +7,12 @@ function App() {
   return (
     <div className="App relative">
       <div className="bg-black py-2 fixed w-[100%] top-0">
-      <Navbar/>
+        <Navbar />
       </div>
 
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/cart" element={<CartPage/>}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/cart" element={<CartPage />} />
       </Routes>
     </div>
   );

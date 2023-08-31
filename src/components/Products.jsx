@@ -18,7 +18,7 @@ const Products = ({ product }) => {
   }
 
   return (
-    <div className="w-[30%] border-2 border-black flex items-center flex-col p-2 gap-2 ">
+    <div className="sm:w-[30%] border-2 border-black flex items-center flex-col p-2 gap-2 ">
       <div className="text-center font-bold text-2xl">
         <p>{product.title.substring(0, 20)}...</p>
       </div>

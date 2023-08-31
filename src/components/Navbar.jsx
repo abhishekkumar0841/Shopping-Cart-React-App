@@ -12,18 +12,18 @@ const Navbar = () => {
     <div className="w-[90%] mx-auto flex items-center justify-between">
       <div>
         <NavLink to={"/"}>
-          <img src={shoppingCartLogo} alt="Logo" width={100} />
+          <img className="w-[100px]" src={shoppingCartLogo} alt="Logo" />
         </NavLink>
       </div>
-      <div className="flex items-center gap-5 w-[15%] justify-between">
+      <div className="flex items-center gap-5 justify-between">
         <NavLink to={"/"}>
           <p className="text-2xl text-white font-bold">Home</p>
         </NavLink>
-        <div className="h-[50px] w-[50px] rounded-full bg-white flex items-center justify-center relative">
+        <div className="h-[50px] w-[50px] mr-10 rounded-full bg-white flex items-center justify-center relative">
           <NavLink className="text-4xl font-bold" to={"/cart"}>
             <AiOutlineShoppingCart />
           </NavLink>
-            <div className="bg-green-600 flex items-center justify-center text-white h-[30px] w-[30px] rounded-full absolute top-[-10px] right-[-20px] text-2xl ">{cart.length}</div>
+            <div className="bg-green-600  flex items-center justify-center text-white h-[30px] w-[30px] rounded-full absolute top-[-10px] right-[-20px] text-2xl ">{cart.length}</div>
         </div>
       </div>
     </div>
